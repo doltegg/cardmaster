@@ -4,286 +4,99 @@ title:  "Elements"
 categories: jekyll update
 img: image-4.png
 ---
-Below elements can be used just by adding certain classes to regular html elements. Since the theme is based on Bootstrap, you can use any bootstrap class in this theme.
+Google Form Customization for Static Websites! Google Form customization is done to remove the branding that is present at the end of Google Forms. This way we can have our own style for a form. We can also use these forms on static websites!
 
-## Buttons
+Customizing Google Forms is important for someone who trusts Google but doesn’t like their branding at the bottom of the forms. Google offers two ways of using their form. One is embedding the form on our website and the second one is redirecting users to the form page.
 
-<a href="#" class="btn btn-default">Default</a>
-<a href="#" class="btn btn-primary">Primary</a>
-<a href="#" class="btn btn-success">Success</a>
-<a href="#" class="btn btn-info">Info</a>
-<a href="#" class="btn btn-warning">Warning</a>
-<a href="#" class="btn btn-danger">Danger</a>
-<a href="#" class="btn btn-link">Link</a>
-<br /><br />
-<a href="#" class="btn btn-primary btn-lg">Large button</a>
-<a href="#" class="btn btn-primary">Default button</a>
-<a href="#" class="btn btn-primary btn-sm">Small button</a>
-<a href="#" class="btn btn-primary btn-xs">Mini button</a>
+Create a Google form Customize Google Form Create a similar form Change Action and Name values Multiple Choice, Options, selects radio inputs Publish it on any website Get responses in a Google SpreadSheet Google Form Redirection Google Form Notification Check if the Google Form is working Improvements like File Uploads Conclusion Both the methods are not that great because you have to choose the template Google provides you and you have to bear the Google branding at the bottom.
 
-{% highlight html %}
-<a href="#" class="btn btn-default">Default</a>
-<a href="#" class="btn btn-primary">Primary</a>
-<a href="#" class="btn btn-success">Success</a>
-<a href="#" class="btn btn-info">Info</a>
-<a href="#" class="btn btn-warning">Warning</a>
-<a href="#" class="btn btn-danger">Danger</a>
-<a href="#" class="btn btn-link">Link</a>
+Customize Google Forms
 
-<a href="#" class="btn btn-primary btn-lg">Large button</a>
-<a href="#" class="btn btn-primary">Default button</a>
-<a href="#" class="btn btn-primary btn-sm">Small button</a>
-<a href="#" class="btn btn-primary btn-xs">Mini button</a>
-{% endhighlight %}
+This is what I’m talking about. Many of us may not bother about the branding. A real headache is when you embed the form on your website, it may display its own scrollbar and may look totally different from your website’s color scheme.
 
+One of my clients asked me whether it is possible to insert google form in their contact page without the google branding on it. I said it isn’t possible. At that time I did not know that we can not only hide the branding, we can completely transform the Google form.
 
-## Typo
+Create a Google form
 
-### Heading
+Go to Google Forms and create a form with values Name and Email. I’m keeping it simple for this tutorial. The next part is to customize Google form.
 
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
+Customize Google Forms
 
-{% highlight html %}
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-{% endhighlight %}
+Customize Google Form
 
-### Blockquote
-<blockquote>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-</blockquote>
+We are going to scrape this Google form for certain values and implement it in our own form. So the first step is to create a form.
 
-{% highlight html %}
-<blockquote>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-</blockquote>
-{% endhighlight %}
+You can have any field in the contact form but I will be using only name and email. Once you create the form, click on Send and it will show you how you can implement the form.
 
+Get the form link and open it in a new tab. It is easier if you’re using a Chrome browser. Now, inspect(f12) each and every field in the form and find name attribute. Copy whatever the value present in it. It will be like entry.742532386.
 
-## Table
+Find <form> tag and copy the URL found in action attribute.
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-{: .table .table-striped .table-hover}
+Customize Google Forms
 
-{% highlight markdown %}
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-{: .table .table-striped .table-hover}
-{% endhighlight %}
+Create a similar form
 
-<div class="mt20"></div>
+Create your own barebone form with the same fields as in the Google form. For this example, a sample form will look like this.
 
-## Indicators
+Name  
+ Email  
+  Send
+Change Action and Name values
 
+Now in your barebone form, change the action to whatever the action you find in the Google form inspection. It will look something like this https://docs.google.com/forms/d/e/1FAIpQLSdqGYth5-G2cP8SILJwjOcJ38vit-Rv8E9SXmtnJUu4ifMcGw/formResponse.
 
-<div class="alert alert-dismissible alert-warning">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <h4>Warning!</h4>
-  <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-</div>
+Copy this value and paste it in your form’s action. Also, copy respective name values and put it in appropriate fields. The completed form should look like this.
 
-{% highlight html %}
-<div class="alert alert-dismissible alert-warning">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <h4>Warning!</h4>
-  <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-</div>
-{% endhighlight %}
+Name  
+ Email  
+  Send
+Multiple Choice, Options, selects radio inputs
 
+For form elements like options and select, the google form will have a hidden 
+ tag at the end of the form. Sometimes you will have to select an option in the form to see that hidden 
+ tag. Copy the name value from that tag to all the options and selects.
 
-<div class="row">
-    <div class="col-md-4">
-        <div class="alert alert-dismissible alert-danger">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
-          </div>
-    </div>
+Publish it on any website
 
+The good thing about the form is that it not only works but it works on static websites as well. This is a great way to insert Google forms in Jekyll websites and blogs hosted on Github Pages.
 
+Try not to spam.
 
-   <div class="col-md-4">
-        <div class="alert alert-dismissible alert-success">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
-        </div>
-    </div>
+Here is a working form that you can check. I have restricted the entries to 18 characters so as to avoid long spams.
 
+Name John Doe
 
+Email john@email.com
 
-   <div class="col-md-4">
-        <div class="alert alert-dismissible alert-info">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
-        </div>
-    </div>
-</div>
+Send Style this form however you want to but I’m keeping it simple without any styles applied. You can check the entries here.
 
+Get responses in a Google SpreadSheet
 
-<div class="row">
-    <div class="col-md-4">
-       {% highlight html %}
-        <div class="alert alert-dismissible alert-danger">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
-          </div>
-          {% endhighlight %}
-    </div>
+This is a cool feature where you can get the entries in a spreadsheet! In the form, click on Responses tab. You should be able to see all the responses right there. But you will see a spreadsheet icon at the top right corner. Click on it and it will ask you whether you’d like to save responses in a new spreadsheet. Click Create
 
+Customize Google Forms
 
+Once you create it, you should see a spreadsheet created with tabs for Name and Email.
 
-   <div class="col-md-4">
-       {% highlight html %}
-        <div class="alert alert-dismissible alert-success">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
-        </div>
-        {% endhighlight %}
-    </div>
+Customize Google Forms
 
+Google Form Redirection
 
+After form submission, you will be redirected to a Google page where it says response is received. You can edit the message and provide a link back to the website. This custom message and link will be shown to the users after they submit the form.
 
-   <div class="col-md-4">
-       {% highlight html %}
-        <div class="alert alert-dismissible alert-info">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
-        </div>
-        {% endhighlight %}
-    </div>
-</div>
+Customize Google Forms
 
-## Labels
+But if you don’t want it to be redirected back to your page, then please use this code instead.
 
-<span class="label label-default">Default</span>
-<span class="label label-primary">Primary</span>
-<span class="label label-success">Success</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
-<span class="label label-info">Info</span>
+Name  
+Name
+ 
+Email  
+Email
+ 
+Send
+Google Form Notification
 
-{% highlight html %}
-<span class="label label-default">Default</span>
-<span class="label label-primary">Primary</span>
-<span class="label label-success">Success</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
-<span class="label label-info">Info</span>
-{% endhighlight %}
-
-
-## Jumbotron
-
-<div class="jumbotron">
-  <h1>Jumbotron</h1>
-  <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-</div>
-
-{% highlight html %}
-<div class="jumbotron">
-  <h1>Jumbotron</h1>
-  <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-</div>
-{% endhighlight %}
-
-## Panels
-
-<div class="row">
-    <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel primary</h3>
-          </div>
-          <div class="panel-body">
-            Panel content
-          </div>
-        </div>
-    </div>
-
-
-
-   <div class="col-md-4">
-        <div class="panel panel-success">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel success</h3>
-          </div>
-          <div class="panel-body">
-            Panel content
-          </div>
-        </div>
-    </div>
-
-
-
-   <div class="col-md-4">
-        <div class="panel panel-warning">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel warning</h3>
-          </div>
-          <div class="panel-body">
-            Panel content
-          </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <div class="panel panel-danger">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel danger</h3>
-          </div>
-          <div class="panel-body">
-            Panel content
-          </div>
-        </div>
-    </div>
-
-
-
-   <div class="col-md-4">
-        <div class="panel panel-info">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel info</h3>
-          </div>
-          <div class="panel-body">
-            Panel content
-          </div>
-        </div>
-    </div>
-
-   <div class="col-md-4">
-    </div>
-</div>
-
-{% highlight html %}
-<div class="panel panel-primary">
-    <div class="panel-heading">
-    <h3 class="panel-title">Panel primary</h3>
-    </div>
-    <div class="panel-body">
-    Panel content
-    </div>
-</div>
-{% endhighlight %}
+Another cool feature is to get notifications to your email upon every entry. You can activate this feature in the spreadsheet by going to Tools » Notification Rules…. Set rules on when to receive notifications and you’re good to go.
 
 Change class ``panel-primary`` to ``panel-warning``, ``panel-success`` and so on to get other panels.
